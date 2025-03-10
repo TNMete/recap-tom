@@ -66,14 +66,24 @@
 
 // findLast() ---------------------------------------------------------
 
-const ages = [3, 10, 18, 20, 30, 40];
+// const ages = [3, 10, 18, 20, 30, 40];
 
-function checkAge(age) {
-    return age > 18;
+// function checkAge(age) {
+//     return age > 18;
+// }
+
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = ages.findLast(checkAge);
+// }
+
+// console.log(ages.findLast(checkAge))
+
+const my_list = [1, 2, 3, 4, 5];
+
+function createHtmlList(my_list) {
+    let listItems = my_list.map((elem) => `\t<li>${elem}</li>\n`).join("");
+    let htmlList = `<ul>\n${listItems}</ul>`;
+    console.log(htmlList);
 }
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = ages.findLast(checkAge);
-}
-
-console.log(ages.findLast(checkAge))
+createHtmlList(my_list);
